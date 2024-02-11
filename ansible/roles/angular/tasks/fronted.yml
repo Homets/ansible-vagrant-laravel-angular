@@ -1,0 +1,11 @@
+---
+- name: create frontend directory
+  file:
+    path: /opt/frontend/
+    state: directory
+    mode: '0755'
+
+- name: copy the frontend
+  copy:
+    src: ../files/front/
+    dest: /opt/frontend

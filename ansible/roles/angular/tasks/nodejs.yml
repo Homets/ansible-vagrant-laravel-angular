@@ -1,0 +1,15 @@
+---
+- name: download utilitary
+  apt:
+    name:
+      - curl
+
+- name: install node repository on debian
+  shell:
+    cmd: curl -fsSL https://deb.nodesource.com/setup_20.0.0 | bash -
+
+- name: install nodejs package
+  apt:
+    name: nodejs
+    state: present
+    update_cache: true
